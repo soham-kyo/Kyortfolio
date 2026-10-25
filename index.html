@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; base-uri 'self'; object-src 'none'; form-action 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; manifest-src 'self'"
+    />
+    <title>Soham-Portfolio</title>
+    <meta
+      name="description"
+      content="Soham Patil — Computer Science student and developer building web, mobile, and AI-powered projects."
+    />
+    <meta name="theme-color" content="#000000" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23000'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%23b9a6ff'/%3E%3C/svg%3E"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/portfolio-upgrades.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="512x512"
+      href="assets/icons/android-chrome-512x512.png"
+    />
+    <link
+      rel="android-chrome-icon"
+      type="image/png"
+      sizes="192x192"
+      href="assets/icons/android-chrome-192x192.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/icons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/icons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/icons/favicon-16x16.png"
+    />
+    <link rel="manifest" href="assets/icons/site.webmanifest" />
+    <link
+      rel="shortcut icon"
+      href="assets/icons/favicon.ico"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <div class="prog" id="prog" aria-hidden="true"></div>
+    <header class="nav" id="nav">
+      <a class="brand" href="#home" id="brand"
+        ><img id="logo" alt="" hidden /><span id="brand-t">soham.kyo</span></a
+      >
+      <button
+        class="burger"
+        id="burger"
+        aria-expanded="false"
+        aria-controls="menu"
+        aria-label="Toggle menu"
+      >
+        <span></span><span></span>
+      </button>
+      <nav aria-label="Primary">
+        <ul id="menu">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <span class="ind" id="ind" aria-hidden="true"></span>
+        </ul>
+      </nav>
+      <button
+        id="theme-toggle"
+        class="theme-toggle"
+        type="button"
+        aria-label="Switch to light mode"
+        title="Toggle theme"
+      >
+        ☀️
+      </button>
+    </header>
+    <main id="main">
+      <section id="home" class="hero" aria-labelledby="h-name">
+        <div class="scene" id="scene" aria-hidden="true">
+          <div class="plate" data-d="1" style="--z: -160px; --r: -8deg"></div>
+          <div class="plate" data-d="2" style="--z: -80px; --r: 6deg"></div>
+          <div class="plate p3" data-d="3" style="--z: 0px; --r: -2deg">
+            <i></i><i></i><i></i>
+          </div>
+          <div class="orb" data-d="4" style="--z: 120px"></div>
+        </div>
+        <div class="hero-copy">
+          <h1 id="h-name">Soham <span>Patil</span></h1>
+          <p class="tag">
+            <span id="tagline"></span> <span class="roles" id="roles"></span>
+          </p>
+          <p class="intro" id="intro"></p>
+          <ul class="soc" id="soc" aria-label="Social links"></ul>
+        </div>
+      </section>
+      <section id="about" aria-labelledby="h-about">
+        <div class="wrap rv">
+          <h2 id="h-about">About</h2>
+          <div class="about" id="about-box"></div>
+        </div>
+      </section>
+      <section id="education" aria-labelledby="h-edu">
+        <div class="wrap rv">
+          <h2 id="h-edu">Education</h2>
+          <div class="cf" id="edu"></div>
+        </div>
+      </section>
+      <section id="experience" aria-labelledby="h-exp">
+        <div class="wrap rv">
+          <h2 id="h-exp">Experience</h2>
+          <ol class="zz" id="exp"></ol>
+        </div>
+      </section>
+      <section id="portfolio" aria-labelledby="h-pf">
+        <div class="wrap rv">
+          <h2 id="h-pf">Portfolio</h2>
+          <div
+            class="mtabs"
+            id="mtabs"
+            role="tablist"
+            aria-label="Portfolio sections"
+          ></div>
+          <div class="tp" id="tp-projects" role="tabpanel">
+            <div
+              class="tabs"
+              id="ptabs"
+              role="group"
+              aria-label="Project categories"
+            ></div>
+            <div class="hs-ctl">
+              <button
+                type="button"
+                id="pprev"
+                aria-label="Scroll projects left"
+              >
+                ‹</button
+              ><button
+                type="button"
+                id="pnext"
+                aria-label="Scroll projects right"
+              >
+                ›
+              </button>
+            </div>
+            <div class="grid" id="grid"></div>
+            <p class="lead" id="pempty" hidden>
+              No projects in this category yet.
+            </p>
+          </div>
+          <div class="tp" id="tp-certs" role="tabpanel" hidden>
+            <div class="hs-ctl">
+              <button
+                type="button"
+                id="cprev"
+                aria-label="Scroll certificates left"
+              >
+                ‹</button
+              ><button
+                type="button"
+                id="cnext"
+                aria-label="Scroll certificates right"
+              >
+                ›
+              </button>
+            </div>
+            <div class="grid" id="certs"></div>
+          </div>
+          <div class="tp" id="tp-stack" role="tabpanel" hidden>
+            <div
+              class="tabs"
+              role="tablist"
+              id="tabs"
+              aria-label="Skill categories"
+            ></div>
+            <div class="chips" id="chips" tabindex="0"></div>
+          </div>
+        </div>
+      </section>
+      <section id="contact" aria-labelledby="h-ct">
+        <div class="wrap rv">
+          <h2 id="h-ct">Contact</h2>
+          <p class="lead" id="ct-text"></p>
+          <div class="ct" id="ct">
+            <div>
+              <canvas id="sph" aria-hidden="true"></canvas>
+              <p class="big">Have an idea, a role, or a question?</p>
+              <button class="btn pri" id="copy" type="button">
+                Copy email
+              </button>
+              <p class="hint" id="ct-hint"></p>
+            </div>
+            <form id="cf" method="post">
+              <label
+                >Your name<input name="n" required autocomplete="name" /></label
+              ><label
+                >Message<textarea name="m" rows="4" required></textarea></label
+              ><button class="btn pri" type="submit">
+                Open in my email app
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <ul class="soc" id="fsoc" aria-label="Social links"></ul>
+      <p>© <span id="yr"></span> soham.kyo</p>
+    </footer>
+    <dialog id="lb" aria-label="Certificate image preview">
+      <img id="lbi" alt="" />
+      <button class="btn" id="lbx" type="button">Close preview</button>
+    </dialog>
+    <noscript><p style="padding: 2rem; color: #fff"></p></noscript>
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/portfolio-upgrades.js"></script>
+  </body>
+</html>
